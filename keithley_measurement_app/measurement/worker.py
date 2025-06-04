@@ -1,6 +1,6 @@
 from PyQt6.QtCore import QObject, pyqtSignal, pyqtSlot
 import time, csv, traceback
-import Keithley_DMM6500_Sockets_Driver as kei
+from . import keithley_adapter as kei
 
 def validate_channel(num):
     return (101 <= num <= 120) or (201 <= num <= 220)
